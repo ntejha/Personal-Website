@@ -28,8 +28,8 @@ export default function NewsletterBanner() {
 
     return (
         <section className="border-b border-border bg-card">
-            <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-8 sm:flex-row sm:justify-between">
-                <div className="flex items-center gap-3">
+            <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 sm:px-6 py-6 sm:py-8 sm:flex-row sm:justify-between">
+                <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
                         <Mail className="h-5 w-5 text-accent" />
                     </div>
@@ -48,9 +48,9 @@ export default function NewsletterBanner() {
                         <AlertCircle className="h-4 w-4" /> Something went wrong. Try again.
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} className="flex w-full gap-2 sm:w-auto">
+                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row w-full gap-2 sm:w-auto">
                         <input type="email" required placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent sm:w-60" />
-                        <button type="submit" disabled={status === "loading"} className="shrink-0 rounded-lg bg-accent px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:opacity-50">
+                        <button type="submit" disabled={status === "loading"} className="shrink-0 rounded-lg bg-accent px-5 py-2 min-h-[44px] text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:opacity-50">
                             {status === "loading" ? "..." : "Subscribe"}
                         </button>
                     </form>

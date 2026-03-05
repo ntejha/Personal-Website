@@ -58,7 +58,20 @@ export const projects: readonly Project[] = [];
 
 // ── Blog Posts (empty — add .md files in content/blog/) ────────────────────
 
-export const blogPosts: readonly BlogPost[] = [];
+export const blogPosts: readonly BlogPost[] = [
+    {
+        slug: "how-i-built-my-portfolio-website",
+        title: "How I Built My Portfolio Website Using AI — No Design Skills Required",
+        summary:
+            "I'm a Data Engineer, not a designer. Here's how I used Google Stitch, Antigravity, and a bunch of AI agents to vibe-code my entire portfolio without touching Figma.",
+        date: "2026-03-04",
+        author: "Tejha",
+        readingTime: 8,
+        tags: ["AI", "Web Dev", "Next.js", "Vibe Coding"],
+        category: "Tutorial",
+        gradient: "from-indigo-500 to-purple-600",
+    },
+];
 
 // ── Footer ─────────────────────────────────────────────────────────────────
 

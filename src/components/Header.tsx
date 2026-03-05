@@ -21,7 +21,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-            <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+            <div className="mx-auto flex h-14 sm:h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
                 {/* Brand */}
                 <Link
                     href="/"
@@ -61,7 +61,7 @@ export default function Header() {
                     {mounted && (
                         <button
                             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                            className="rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                             aria-label="Toggle theme"
                         >
                             {theme === "dark" ? (
@@ -73,7 +73,7 @@ export default function Header() {
                     )}
                     <button
                         onClick={() => setMobileOpen(!mobileOpen)}
-                        className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                        className="rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                         aria-label="Toggle menu"
                     >
                         {mobileOpen ? (
@@ -87,7 +87,7 @@ export default function Header() {
 
             {/* Mobile dropdown */}
             {mobileOpen && (
-                <nav className="border-t border-border bg-background px-6 py-4 md:hidden">
+                <nav className="border-t border-border bg-background px-4 sm:px-6 py-4 md:hidden">
                     <div className="flex flex-col gap-3">
                         {navLinks.map((link) => (
                             <Link
@@ -95,7 +95,7 @@ export default function Header() {
                                 href={link.href}
                                 onClick={() => setMobileOpen(false)}
                                 className={cn(
-                                    "text-sm font-medium transition-colors",
+                                    "text-base font-medium transition-colors min-h-[44px] flex items-center",
                                     pathname === link.href
                                         ? "text-accent"
                                         : "text-muted-foreground hover:text-foreground"

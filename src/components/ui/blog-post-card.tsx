@@ -53,7 +53,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             <Card className="flex w-full flex-col gap-3 overflow-hidden rounded-3xl border border-border p-3 shadow-lg transition-all hover:shadow-xl hover:shadow-accent/5">
                 {/* Cover — real image or gradient fallback */}
                 <CardHeader className="p-0">
-                    <div className="relative h-56 w-full overflow-hidden rounded-2xl">
+                    <div className="relative h-40 sm:h-56 w-full overflow-hidden rounded-2xl">
                         {cover ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -89,7 +89,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
                         </div>
                     )}
 
-                    <h2 className="mb-2 text-xl font-bold leading-tight text-card-foreground">
+                    <h2 className="mb-2 text-lg sm:text-xl font-bold leading-tight text-card-foreground">
                         {headline}
                     </h2>
 

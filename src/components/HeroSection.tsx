@@ -14,13 +14,13 @@ export default function HeroSection() {
                 fill="#137fec"
             />
 
-            <div className="flex flex-col md:flex-row min-h-[500px] lg:min-h-[600px]">
+            <div className="flex flex-col md:flex-row min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
                 {/* Left content */}
-                <div className="flex-1 p-8 md:p-12 lg:p-16 relative z-10 flex flex-col justify-center">
+                <div className="flex-1 px-4 py-8 sm:p-8 md:p-12 lg:p-16 relative z-10 flex flex-col justify-center">
                     <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
                         Data Engineer — Available for hire
                     </p>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight">
                         Data Engineer building
                         <br />
                         scalable pipelines that{" "}
@@ -28,22 +28,22 @@ export default function HeroSection() {
                             matter.
                         </span>
                     </h1>
-                    <p className="mt-6 text-neutral-300 max-w-lg leading-relaxed">
+                    <p className="mt-4 sm:mt-6 text-sm sm:text-base text-neutral-300 max-w-lg leading-relaxed">
                         I&apos;m Tejha — a Data Engineer specializing in building scalable
                         data pipelines, real-time streaming systems, and ML infrastructure.
                         I write about ETL best practices, cloud architecture, and modern
                         data platforms on my tech blog.
                     </p>
-                    <div className="mt-8 flex flex-wrap gap-4">
+                    <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <Link
                             href="/projects"
-                            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+                            className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 min-h-[44px] text-sm font-medium text-white transition-colors hover:bg-accent-hover"
                         >
                             View Projects <ArrowRight className="h-4 w-4" />
                         </Link>
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-300 transition-colors hover:border-accent hover:text-white"
+                            className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-700 px-6 py-3 min-h-[44px] text-sm font-medium text-neutral-300 transition-colors hover:border-accent hover:text-white"
                         >
                             Read Blog
                         </Link>
@@ -51,7 +51,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Right content — Spline 3D */}
-                <div className="flex-1 relative min-h-[300px] md:min-h-0" aria-hidden="true">
+                <div className="flex-1 relative min-h-[250px] sm:min-h-[300px] md:min-h-0" aria-hidden="true">
                     <SplineScene
                         scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                         className="w-full h-full"
